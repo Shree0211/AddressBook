@@ -42,5 +42,14 @@ namespace AddressBook
             else
                 Console.WriteLine("Contact doesnt exists");
         }
+
+        public void AddMultipleContacts()
+        {
+            int numberOfContacts;
+           Console.Write("Enter no of Contacts to add: ");
+            numberOfContacts = Int32.Parse(Console.ReadLine());
+            for (int i = 0; i < numberOfContacts; i++)
+                CreateContact();
+        }
     }
 }
