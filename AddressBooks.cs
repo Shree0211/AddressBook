@@ -29,5 +29,18 @@ namespace AddressBook
             else
                 Console.WriteLine("Contact doesnt exists");
         }
+
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter name of contact to delete:");
+            String name = Console.ReadLine();
+
+            if (contacts.ContainsKey(name))
+            {
+                contacts.Remove(name);
+            }
+            else
+                Console.WriteLine("Contact doesnt exists");
+        }
     }
 }
