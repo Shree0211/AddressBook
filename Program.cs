@@ -5,3 +5,6 @@ Myaddressbook.CreateContact();
 Myaddressbook.EditInfo();
 Myaddressbook.DeleteContact();
 Myaddressbook.AddMultipleContacts();
+
+AddressBookCollection addbooks = new AddressBookCollection();
+addbooks.AddBook(Myaddressbook);

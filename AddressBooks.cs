@@ -9,7 +9,7 @@ namespace AddressBook
     public class AddressBooks
     {
         public Dictionary<string ,Contacts> contacts = new Dictionary<string, Contacts>();
-
+        public string name;
         public void CreateContact()
         {
             Contacts contact = new Contacts();
