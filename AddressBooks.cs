@@ -8,14 +8,26 @@ namespace AddressBook
 {
     public class AddressBooks
     {
-        public List<Contacts> contacts = new List<Contacts>();
+        public Dictionary<string ,Contacts> contacts = new Dictionary<string, Contacts>();
 
         public void CreateContact()
         {
             Contacts contact = new Contacts();
             contact.GetInfo();
-            contacts.Add(contact);
+            contacts.Add(contact.fName+ " " +contact.lName, contact);
 
+        }
+        public void EditInfo()
+        {
+            Console.WriteLine("Enter name of contact:");
+            String name = Console.ReadLine();
+
+            if (contacts.ContainsKey(name))
+            {
+                contacts[name].GetInfo();
+            }
+            else
+                Console.WriteLine("Contact doesnt exists");
         }
     }
 }
